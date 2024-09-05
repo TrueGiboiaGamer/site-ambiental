@@ -1,0 +1,99 @@
+/* Reset básico para garantir que o estilo fique consistente em diferentes navegadores */
+* {
+    margin: 2;
+    padding: 1;
+    box-sizing: border-box;
+}
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5; /* Cor de fundo clara */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #004d99; /* Cor de fundo escura */
+    color: #fff; /* Cor do texto */
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #fff; /* Cor dos links */
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ffcc00; /* Cor dos links ao passar o mouse */
+}
+
+/* Estilo para o conteúdo principal */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: #fff; /* Cor de fundo branca para seções */
+    border: 1px solid #ddd; /* Borda cinza clara */
+    padding: 1rem;
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #004d99; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto */
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Cor de fundo do cabeçalho */
+header {
+    background-color: #333; /* Cor de fundo escura */
+}
+
+/* Cor de fundo do rodapé */
+footer {
+    background-color: #444; /* Cor de fundo um pouco mais clara que o cabeçalho */
+}
+/* Cor do texto no corpo da página */
+body {
+    color: #333; /* Texto escuro para melhor legibilidade */
+}
+
+/* Cor do texto no cabeçalho */
+header h1 {
+    color: #fff; /* Texto branco para contraste com o fundo escuro */
+}
+
+/* Cor dos links no menu de navegação */
+nav a {
+    color: #fff; /* Links brancos para se destacarem no fundo escuro */
+}
+/* Borda de uma seção */
+section {
+    border: 2px solid #ddd; /* Borda cinza clara */
+    padding: 1rem;
+}
+

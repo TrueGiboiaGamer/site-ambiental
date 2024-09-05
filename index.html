@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question label {
+            display: block;
+            margin: 5px 0;
+        }
+        .question input {
+            margin-right: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz</h1>
+
+    <form id="quizForm">
+        <div class="question">
+            <p>1. Qual é a capital do Brasil?</p>
+            <label><input type="radio" name="q1" value="a"> São Paulo</label>
+            <label><input type="radio" name="q1" value="b"> Rio de Janeiro</label>
+            <label><input type="radio" name="q1" value="c"> Brasília</label>
+        </div>
+
+        <div class="question">
+            <p>2. Qual é a maior floresta do mundo?</p>
+            <label><input type="radio" name="q2" value="a"> Floresta Amazônica</label>
+            <label><input type="radio" name="q2" value="b"> Floresta Negra</label>
+            <label><input type="radio" name="q2" value="c"> Floresta de Sherwood</label>
+        </div>
+
+        <div class="question">
+            <p>3. Qual é o planeta mais próximo do Sol?</p>
+            <label><input type="radio" name="q3" value="a"> Terra</label>
+            <label><input type="radio" name="q3" value="b"> Marte</label>
+            <label><input type="radio" name="q3" value="c"> Mercúrio</label>
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Enviar Respostas</button>
+    </form>
+
+    <div id="result" class="result"></div>
+
+    <script>
+        function submitQuiz() {
+            var correctAnswers = ['c', 'a', 'c'];
+            var score = 0;
+            var form = document.getElementById('quizForm');
+            var formData = new FormData(form);
+
+            for (var i = 0; i < correctAnswers.length; i++) {
+                if (formData.get('q' + (i + 1)) === correctAnswers[i]) {
+                    score++;
+                }
+            }
+
+            var resultDiv = document.getElementById('result');
+            resultDiv.textContent = 'Você acertou ' + score + ' de ' + correctAnswers.length + ' perguntas.';
+        }
+    </script>
+</body>
+</html>
